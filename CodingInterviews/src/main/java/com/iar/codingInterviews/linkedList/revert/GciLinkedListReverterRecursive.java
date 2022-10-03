@@ -1,4 +1,6 @@
-package com.iar.codingInterviews.revertLinkedList;
+package com.iar.codingInterviews.linkedList.revert;
+
+import com.iar.codingInterviews.linkedList.GciLinkedListNode;
 
 public class GciLinkedListReverterRecursive<T> implements GciLinkedListReverter<T> {
 

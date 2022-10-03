@@ -1,6 +1,8 @@
-package com.iar.codingInterviews.revertLinkedList;
+package com.iar.codingInterviews.linkedList.traverse;
 
 import java.util.function.Consumer;
+
+import com.iar.codingInterviews.linkedList.GciLinkedListNode;
 
 public class GciLinkedListTraverserIterative<T> implements GciLinkedListTraverser<T> {
 

@@ -1,4 +1,4 @@
-package com.iar.codingInterviews.revertLinkedList;
+package com.iar.codingInterviews.linkedList;
 
 public class GciLinkedListNode<T> {
 

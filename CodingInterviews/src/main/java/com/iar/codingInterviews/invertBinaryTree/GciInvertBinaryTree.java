@@ -1,6 +1,6 @@
 package com.iar.codingInterviews.invertBinaryTree;
 
-import com.iar.codingInterviews.revertLinkedList.GciLinkedListNode;
+import com.iar.codingInterviews.linkedList.GciLinkedListNode;
 
 public class GciInvertBinaryTree {
 	

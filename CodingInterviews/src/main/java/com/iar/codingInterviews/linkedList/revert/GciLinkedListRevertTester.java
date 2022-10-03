@@ -1,44 +1,62 @@
-package com.iar.codingInterviews.revertLinkedList;
+package com.iar.codingInterviews.linkedList.revert;
 
 import org.junit.Test;
 
+import com.iar.codingInterviews.linkedList.GciLinkedListNode;
+
 public class GciLinkedListRevertTester {
 
+	GciLinkedListReverter<String> reverter = null;
+
 	private GciLinkedListReverter<String> getReverter() {
-		return new GciLinkedListReverterRecursive<String>();
-	}
-
-	private GciLinkedListTraverser<String> getTraversal() {
-		return new GciLinkedListTraverserRecursive<String>();
+		return reverter;
 	}
 
 	@Test
-	public void test0() {
-		GciLinkedListNode<String> head = null;
+	public void test() {
+		reverter = new GciLinkedListReverterIterative<String>();
+		repeatTests();
+		reverter = new GciLinkedListReverterRecursive<String>();
+		repeatTests();
+	}
+
+	private void repeatTests() {
+		test0();
+		test1();
+		test2();
+		test4();
+	}
+
+	private void test0() {
+		GciLinkedListNode<String> head = createSample0LinkedList();
 		GciLinkedListNode<String> newHead = getReverter().revert(head);
-		assert (newHead == null);
+		assertRevertedSample0LinkedList(newHead);
 	}
 
-	@Test
-	public void test1() {
+	private void test1() {
 		GciLinkedListNode<String> head = createSample1LinkedList();
 		GciLinkedListNode<String> newHead = getReverter().revert(head);
 		assertRevertedSample1LinkedList(newHead);
 	}
 
-	@Test
-	public void test2() {
+	private void test2() {
 		GciLinkedListNode<String> head = createSample2LinkedList();
 		GciLinkedListNode<String> newHead = getReverter().revert(head);
 		assertRevertedSample2LinkedList(newHead);
 	}
 
-	@Test
-	public void test4() {
+	private void test4() {
 		GciLinkedListNode<String> head = createSample4LinkedList();
 		GciLinkedListNode<String> newHead = getReverter().revert(head);
-		getTraversal().traverse(newHead, node -> System.out.println(node.getValue()));
 		assertRevertedSample4LinkedList(newHead);
+	}
+	
+	private GciLinkedListNode<String> createSample0LinkedList() {
+		return null;
+	}
+
+	private void assertRevertedSample0LinkedList(GciLinkedListNode<String> newHead) {
+		assert (newHead == null);
 	}
 
 	private GciLinkedListNode<String> createSample1LinkedList() {
@@ -81,13 +99,5 @@ public class GciLinkedListRevertTester {
 		assert (newHead.getNext().getNext().getValue().equals("b"));
 		assert (newHead.getNext().getNext().getNext().getValue().equals("a"));
 		assert (newHead.getNext().getNext().getNext().getNext() == null);
-	}
-
-	private static void print(GciLinkedListNode<String> head) {
-		GciLinkedListNode<String> current = head;
-		while (current != null) {
-			System.out.println(current.getValue());
-			current = current.getNext();
-		}
 	}
 }
