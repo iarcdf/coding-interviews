@@ -14,7 +14,7 @@ public class GciLinkedListTraverserRecursive<T> implements GciLinkedListTraverse
 
 		if (current != null) {
 			consumer.accept(current);
-			traverse(current.getNextNode(), consumer);
+			traverse(current.getNext(), consumer);
 		}
 	}
 }

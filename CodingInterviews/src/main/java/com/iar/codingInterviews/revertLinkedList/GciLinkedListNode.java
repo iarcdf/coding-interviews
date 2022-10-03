@@ -4,7 +4,7 @@ public class GciLinkedListNode<T> {
 
 	private T value;
 
-	private GciLinkedListNode<T> nextNode;
+	private GciLinkedListNode<T> next;
 	
 	public GciLinkedListNode(T value) {
 		this.value = value;
@@ -18,12 +18,12 @@ public class GciLinkedListNode<T> {
 		this.value = value;
 	}
 
-	public GciLinkedListNode<T> getNextNode() {
-		return nextNode;
+	public GciLinkedListNode<T> getNext() {
+		return next;
 	}
 
-	public void setNextNode(GciLinkedListNode<T> nextNode) {
-		this.nextNode = nextNode;
+	public void setNext(GciLinkedListNode<T> nextNode) {
+		this.next = nextNode;
 	}
 	
 	

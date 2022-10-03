@@ -8,11 +8,11 @@ public class GciInvertBinaryTree {
 		
 		GciLinkedListNode<String> a = new GciLinkedListNode<>("a");
 		GciLinkedListNode<String> b = new GciLinkedListNode<>("b");
-		a.setNextNode(b);
+		a.setNext(b);
 		GciLinkedListNode<String> c = new GciLinkedListNode<>("c");
-		b.setNextNode(c);
+		b.setNext(c);
 		GciLinkedListNode<String> d = new GciLinkedListNode<>("d");
-		c.setNextNode(d);
+		c.setNext(d);
 		
 		print(a);
 
@@ -40,22 +40,22 @@ public class GciInvertBinaryTree {
 		
 		if(head==null) return null;
 		
-		if(head.getNextNode()==null) return head;
+		if(head.getNext()==null) return head;
 		
 		GciLinkedListNode<String> n1 = head;
-		GciLinkedListNode<String> n2 = n1.getNextNode();
-		GciLinkedListNode<String> n3 = n2.getNextNode();
+		GciLinkedListNode<String> n2 = n1.getNext();
+		GciLinkedListNode<String> n3 = n2.getNext();
 		
 		while(n3!=null) {
-			n2.setNextNode(n1);
+			n2.setNext(n1);
 			n1 = n2;
 			n2 = n3;
-			n3 = n3.getNextNode();
+			n3 = n3.getNext();
 		}
 
-		n2.setNextNode(n1);
+		n2.setNext(n1);
 
-		head.setNextNode(null);
+		head.setNext(null);
 		
 		return n2;
 	}
@@ -64,7 +64,7 @@ public class GciInvertBinaryTree {
 		GciLinkedListNode<String> current = head;
 		while(current!=null) {
 			System.out.println(current.getValue());
-			current = current.getNextNode();
+			current = current.getNext();
 		}
 	}
 }

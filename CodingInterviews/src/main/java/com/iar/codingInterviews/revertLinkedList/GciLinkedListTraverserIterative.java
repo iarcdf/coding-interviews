@@ -14,7 +14,7 @@ public class GciLinkedListTraverserIterative<T> implements GciLinkedListTraverse
 
 		while (current != null) {
 			consumer.accept(current);
-			current = current.getNextNode();
+			current = current.getNext();
 		}
 	}
 }
