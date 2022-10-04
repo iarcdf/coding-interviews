@@ -2,9 +2,9 @@ package com.iar.codingInterviews.binaryTree.breathFirstValues;
 
 import java.util.List;
 
-import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
+import com.iar.codingInterviews.graph.GciGraphNode;
 
 public interface GciBinaryTreeBreadthFirstValues<T> {
 
-	List<T> breadthFirstValues(GciBinaryTreeNode<T> root);
+	List<T> breadthFirstValues(GciGraphNode<T> root);
 }

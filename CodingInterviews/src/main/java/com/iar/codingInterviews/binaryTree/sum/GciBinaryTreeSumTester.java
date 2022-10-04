@@ -2,8 +2,8 @@ package com.iar.codingInterviews.binaryTree.sum;
 
 import org.junit.Test;
 
-import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
-import com.iar.codingInterviews.binaryTree.GciBinaryTreeSample;
+import com.iar.codingInterviews.graph.GciGraphNode;
+import com.iar.codingInterviews.graph.GciGraphSample;
 
 public class GciBinaryTreeSumTester {
 
@@ -15,8 +15,8 @@ public class GciBinaryTreeSumTester {
 
 	@Test
 	public void test() {
-		//sum = new GciBinaryTreeSumIterative();
-		//repeatTests();
+		sum = new GciBinaryTreeSumIterative();
+		repeatTests();
 		sum = new GciBinaryTreeSumRecursive();
 		repeatTests();
 	}
@@ -28,19 +28,19 @@ public class GciBinaryTreeSumTester {
 	}
 
 	private void test0() {
-		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt0BinaryTree();
+		GciGraphNode<Integer> root = GciGraphSample.createSampleInt0BinaryTree();
 		int sum = getSum().sum(root);
 		assertSumSample0BinaryTree(sum);
 	}
 
 	private void test1() {
-		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt1BinaryTree();
+		GciGraphNode<Integer> root = GciGraphSample.createSampleInt1BinaryTree();
 		int sum = getSum().sum(root);
 		assertSumSample1BinaryTree(sum);
 	}
 
 	private void test6() {
-		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt6BinaryTree();
+		GciGraphNode<Integer> root = GciGraphSample.createSampleInt06BinaryTree();
 		int sum = getSum().sum(root);
 		assertSumSample6BinaryTree(sum);
 	}

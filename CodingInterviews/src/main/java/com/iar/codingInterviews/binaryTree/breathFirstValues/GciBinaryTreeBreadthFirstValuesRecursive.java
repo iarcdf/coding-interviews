@@ -3,14 +3,14 @@ package com.iar.codingInterviews.binaryTree.breathFirstValues;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
+import com.iar.codingInterviews.graph.GciGraphNode;
 
 public class GciBinaryTreeBreadthFirstValuesRecursive<T> implements GciBinaryTreeBreadthFirstValues<T> {
 
 	// Time: O(number of nodes)
 	// Space: O(depth of tree)
 	@Override
-	public List<T> breadthFirstValues(GciBinaryTreeNode<T> root) {
+	public List<T> breadthFirstValues(GciGraphNode<T> root) {
 		List<T> values = new ArrayList<T>();
 		if (root == null)
 			return values;
@@ -19,7 +19,7 @@ public class GciBinaryTreeBreadthFirstValuesRecursive<T> implements GciBinaryTre
 		return values;
 	}
 
-	private void breadthFirstValues(GciBinaryTreeNode<T> parent, List<T> values) {
+	private void breadthFirstValues(GciGraphNode<T> parent, List<T> values) {
 
 		if (parent == null)
 			return;

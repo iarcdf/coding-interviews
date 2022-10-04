@@ -5,23 +5,22 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
-import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
+import com.iar.codingInterviews.graph.GciGraphNode;
 
 public class GciBinaryTreeBreadthFirstValuesIterative<T> implements GciBinaryTreeBreadthFirstValues<T> {
 
 	// Time: O(number of nodes)
 	// Space: O(number of nodes)
 	@Override
-	public List<T> breadthFirstValues(GciBinaryTreeNode<T> root) {
+	public List<T> breadthFirstValues(GciGraphNode<T> root) {
 		List<T> values = new ArrayList<T>();
 		if (root == null)
 			return values;
-		Deque<GciBinaryTreeNode<T>> queue = new ArrayDeque<>();
+		Deque<GciGraphNode<T>> queue = new ArrayDeque<>();
 		queue.add(root);
 		while (!queue.isEmpty()) {
-			GciBinaryTreeNode<T> current = queue.getFirst();
+			GciGraphNode<T> current = queue.pop();
 			values.add(current.getValue());
-			queue.removeFirst();
 			if (current.getLeft() != null) {
 				queue.add(current.getLeft());
 			}

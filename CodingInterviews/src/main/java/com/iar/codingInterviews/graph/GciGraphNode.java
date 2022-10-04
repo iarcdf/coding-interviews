@@ -1,12 +1,12 @@
-package com.iar.codingInterviews.binaryTree;
+package com.iar.codingInterviews.graph;
 
-public class GciBinaryTreeNode<T> {
+public class GciGraphNode<T> {
 
 	private T value;
 
-	GciBinaryTreeNode<T> left = null;
+	GciGraphNode<T> left = null;
 
-	GciBinaryTreeNode<T> right = null;
+	GciGraphNode<T> right = null;
 
 	public T getValue() {
 		return value;
@@ -16,19 +16,19 @@ public class GciBinaryTreeNode<T> {
 		this.value = value;
 	}
 
-	public GciBinaryTreeNode<T> getLeft() {
+	public GciGraphNode<T> getLeft() {
 		return left;
 	}
 
-	public void setLeft(GciBinaryTreeNode<T> left) {
+	public void setLeft(GciGraphNode<T> left) {
 		this.left = left;
 	}
 
-	public GciBinaryTreeNode<T> getRight() {
+	public GciGraphNode<T> getRight() {
 		return right;
 	}
 
-	public void setRight(GciBinaryTreeNode<T> right) {
+	public void setRight(GciGraphNode<T> right) {
 		this.right = right;
 	}
 }
