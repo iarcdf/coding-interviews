@@ -4,30 +4,24 @@ import com.iar.codingInterviews.linkedList.GciLinkedListNode;
 
 public class GciLinkedListReverterIterative<T> implements GciLinkedListReverter<T> {
 
+	// Time: O(number of nodes)
+	// Space: O(1)
 	@Override
 	public GciLinkedListNode<T> revert(GciLinkedListNode<T> head) {
 
 		if (head == null)
 			return null;
 
-		if (head.getNext() == null)
-			return head;
+		GciLinkedListNode<T> previous = null;
+		GciLinkedListNode<T> current = head;
 
-		GciLinkedListNode<T> n1 = head;
-		GciLinkedListNode<T> n2 = n1.getNext();
-		GciLinkedListNode<T> n3 = n2.getNext();
-
-		while (n3 != null) {
-			n2.setNext(n1);
-			n1 = n2;
-			n2 = n3;
-			n3 = n3.getNext();
+		while (current != null) {
+			GciLinkedListNode<T> next = current.getNext();
+			current.setNext(previous);
+			previous = current;
+			current = next;
 		}
 
-		n2.setNext(n1);
-
-		head.setNext(null);
-
-		return n2;
+		return previous;
 	}
 }

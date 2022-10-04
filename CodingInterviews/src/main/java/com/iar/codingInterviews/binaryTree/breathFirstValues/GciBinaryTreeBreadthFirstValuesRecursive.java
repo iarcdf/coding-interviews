@@ -1,0 +1,39 @@
+package com.iar.codingInterviews.binaryTree.breathFirstValues;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
+
+public class GciBinaryTreeBreadthFirstValuesRecursive<T> implements GciBinaryTreeBreadthFirstValues<T> {
+
+	// Time: O(number of nodes)
+	// Space: O(depth of tree)
+	@Override
+	public List<T> breadthFirstValues(GciBinaryTreeNode<T> root) {
+		List<T> values = new ArrayList<T>();
+		if (root == null)
+			return values;
+		values.add(root.getValue());
+		breadthFirstValues(root, values);
+		return values;
+	}
+
+	private void breadthFirstValues(GciBinaryTreeNode<T> parent, List<T> values) {
+
+		if (parent == null)
+			return;
+
+		if (parent.getLeft() != null) {
+			values.add(parent.getLeft().getValue());
+		}
+
+		if (parent.getRight() != null) {
+			values.add(parent.getRight().getValue());
+		}
+
+		breadthFirstValues(parent.getLeft(), values);
+		breadthFirstValues(parent.getRight(), values);
+	}
+
+}

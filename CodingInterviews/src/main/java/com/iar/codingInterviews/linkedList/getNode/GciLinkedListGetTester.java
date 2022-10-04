@@ -1,62 +1,47 @@
-package com.iar.codingInterviews.linkedList.find;
+package com.iar.codingInterviews.linkedList.getNode;
 
 import org.junit.Test;
 
 import com.iar.codingInterviews.linkedList.GciLinkedListNode;
 
-public class GciLinkedListFinderTester {
+public class GciLinkedListGetTester {
 
-	GciLinkedListFinder<String> finder = null;
+	GciLinkedListGetNode<String> getter = null;
 
-	private GciLinkedListFinder<String> getFinder() {
-		return finder;
+	private GciLinkedListGetNode<String> getGetter() {
+		return getter;
 	}
 
 	@Test
 	public void test() {
-		finder = new GciLinkedListFindIterative<String>();
+		getter = new GciLinkedListGetIterative<String>();
 		repeatTests();
-		finder = new GciLinkedListFindRecursive<String>();
+		getter = new GciLinkedListGetRecursive<String>();
 		repeatTests();
 	}
 
 	private void repeatTests() {
-		test0();
 		test1();
 		test2();
 		test4();
 	}
 
-	private void test0() {
-		GciLinkedListNode<String> head = createSample0LinkedList();
-		GciLinkedListNode<String> newHead = getFinder().find(head, "a");
-		assertFindSample0LinkedList(newHead);
-	}
-
 	private void test1() {
 		GciLinkedListNode<String> head = createSample1LinkedList();
-		GciLinkedListNode<String> newHead = getFinder().find(head, "b");
+		GciLinkedListNode<String> newHead = getGetter().get(head, 0);
 		assertFindSample1LinkedList(newHead);
 	}
 
 	private void test2() {
 		GciLinkedListNode<String> head = createSample2LinkedList();
-		GciLinkedListNode<String> newHead = getFinder().find(head, "e");
+		GciLinkedListNode<String> newHead = getGetter().get(head, 1);
 		assertFindSample2LinkedList(newHead);
 	}
 
 	private void test4() {
 		GciLinkedListNode<String> head = createSample4LinkedList();
-		GciLinkedListNode<String> newHead = getFinder().find(head, "d");
+		GciLinkedListNode<String> newHead = getGetter().get(head, 2);
 		assertFindSample4LinkedList(newHead);
-	}
-	
-	private GciLinkedListNode<String> createSample0LinkedList() {
-		return null;
-	}
-
-	private void assertFindSample0LinkedList(GciLinkedListNode<String> newHead) {
-		assert (newHead == null);
 	}
 
 	private GciLinkedListNode<String> createSample1LinkedList() {
@@ -65,7 +50,7 @@ public class GciLinkedListFinderTester {
 	}
 
 	private void assertFindSample1LinkedList(GciLinkedListNode<String> newHead) {
-		assert (newHead == null);
+		assert (newHead.getValue().equals("a"));
 	}
 
 	private GciLinkedListNode<String> createSample2LinkedList() {
@@ -76,7 +61,7 @@ public class GciLinkedListFinderTester {
 	}
 
 	private void assertFindSample2LinkedList(GciLinkedListNode<String> newHead) {
-		assert (newHead == null);
+		assert (newHead.getValue().equals("b"));
 	}
 
 	private GciLinkedListNode<String> createSample4LinkedList() {
@@ -91,6 +76,6 @@ public class GciLinkedListFinderTester {
 	}
 
 	private void assertFindSample4LinkedList(GciLinkedListNode<String> newHead) {
-		assert (newHead.getValue().equals("d"));
+		assert (newHead.getValue().equals("c"));
 	}
 }
