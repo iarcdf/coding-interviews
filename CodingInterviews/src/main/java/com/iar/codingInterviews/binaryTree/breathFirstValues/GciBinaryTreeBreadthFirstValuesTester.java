@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.iar.codingInterviews.graph.GciGraphNode;
-import com.iar.codingInterviews.graph.GciGraphSample;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeSample;
 
 public class GciBinaryTreeBreadthFirstValuesTester {
 
@@ -19,32 +19,37 @@ public class GciBinaryTreeBreadthFirstValuesTester {
 	public void test() {
 		depthFirstValues = new GciBinaryTreeBreadthFirstValuesIterative<String>();
 		repeatTests();
-		depthFirstValues = new GciBinaryTreeBreadthFirstValuesRecursive<String>();
-		repeatTests();
 	}
 
 	private void repeatTests() {
 		test0();
 		test1();
 		test6();
+		test66();
 	}
 
 	private void test0() {
-		GciGraphNode<String> root = GciGraphSample.createSample0BinaryTree();
+		GciBinaryTreeNode<String> root = GciBinaryTreeSample.createSample0BinaryTree();
 		List<String> values = getDepthFirstValues().breadthFirstValues(root);
 		assertDepthFirstValuesSample0BinaryTree(values);
 	}
 
 	private void test1() {
-		GciGraphNode<String> root = GciGraphSample.createSample1BinaryTree();
+		GciBinaryTreeNode<String> root = GciBinaryTreeSample.createSample1BinaryTree();
 		List<String> values = getDepthFirstValues().breadthFirstValues(root);
 		assertDepthFirstValuesSample1BinaryTree(values);
 	}
 
 	private void test6() {
-		GciGraphNode<String> root = GciGraphSample.createSample6BinaryTree();
+		GciBinaryTreeNode<String> root = GciBinaryTreeSample.createSample6BinaryTree();
 		List<String> values = getDepthFirstValues().breadthFirstValues(root);
 		assertDepthFirstValuesSample6BinaryTree(values);
+	}
+
+	private void test66() {
+		GciBinaryTreeNode<String> root = GciBinaryTreeSample.createSample66BinaryTree();
+		List<String> values = getDepthFirstValues().breadthFirstValues(root);
+		assertDepthFirstValuesSample66BinaryTree(values);
 	}
 
 	private void assertDepthFirstValuesSample0BinaryTree(List<String> values) {
@@ -57,6 +62,16 @@ public class GciBinaryTreeBreadthFirstValuesTester {
 	}
 
 	private void assertDepthFirstValuesSample6BinaryTree(List<String> values) {
+		assert (values.size() == 6);
+		assert (values.get(0).equals("a"));
+		assert (values.get(1).equals("b"));
+		assert (values.get(2).equals("c"));
+		assert (values.get(3).equals("d"));
+		assert (values.get(4).equals("e"));
+		assert (values.get(5).equals("f"));
+	}
+
+	private void assertDepthFirstValuesSample66BinaryTree(List<String> values) {
 		assert (values.size() == 6);
 		assert (values.get(0).equals("a"));
 		assert (values.get(1).equals("b"));

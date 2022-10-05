@@ -1,8 +1,8 @@
 package com.iar.codingInterviews.binaryTree.invert;
 
-import com.iar.codingInterviews.graph.GciGraphNode;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
 
 public interface GciBinaryTreeInverter<T> {
 
-	GciGraphNode<T> invert(GciGraphNode<T> root);
+	GciBinaryTreeNode<T> invert(GciBinaryTreeNode<T> root);
 }

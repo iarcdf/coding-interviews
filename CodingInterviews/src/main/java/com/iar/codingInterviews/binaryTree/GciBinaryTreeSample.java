@@ -32,6 +32,27 @@ public class GciBinaryTreeSample {
 		c.setRight(f);
 		return a;
 	}
+	
+	public static GciBinaryTreeNode<String> createSample66BinaryTree() {
+		GciBinaryTreeNode<String> a = new GciBinaryTreeNode<>();
+		a.setValue("a");
+		GciBinaryTreeNode<String> b = new GciBinaryTreeNode<>();
+		b.setValue("b");
+		GciBinaryTreeNode<String> c = new GciBinaryTreeNode<>();
+		c.setValue("c");
+		GciBinaryTreeNode<String> d = new GciBinaryTreeNode<>();
+		d.setValue("d");
+		GciBinaryTreeNode<String> e = new GciBinaryTreeNode<>();
+		e.setValue("e");
+		GciBinaryTreeNode<String> f = new GciBinaryTreeNode<>();
+		f.setValue("f");
+		a.setLeft(b);
+		a.setRight(c);
+		b.setLeft(d);
+		c.setRight(e);
+		d.setRight(f);
+		return a;
+	}
 
 	public static GciBinaryTreeNode<Integer> createSampleInt0BinaryTree() {
 		return null;

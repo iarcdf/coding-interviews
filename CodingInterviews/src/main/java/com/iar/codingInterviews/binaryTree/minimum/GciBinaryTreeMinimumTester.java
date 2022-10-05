@@ -2,8 +2,8 @@ package com.iar.codingInterviews.binaryTree.minimum;
 
 import org.junit.Test;
 
-import com.iar.codingInterviews.graph.GciGraphNode;
-import com.iar.codingInterviews.graph.GciGraphSample;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeSample;
 
 public class GciBinaryTreeMinimumTester {
 
@@ -28,32 +28,32 @@ public class GciBinaryTreeMinimumTester {
 	}
 
 	private void test0() {
-		GciGraphNode<Integer> root = GciGraphSample.createSampleInt0BinaryTree();
-		GciGraphNode<Integer> result = getMinimum().minimum(root);
+		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt0BinaryTree();
+		GciBinaryTreeNode<Integer> result = getMinimum().minimum(root);
 		assertMinimumSample0BinaryTree(result);
 	}
 
 	private void test1() {
-		GciGraphNode<Integer> root = GciGraphSample.createSampleInt1BinaryTree();
-		GciGraphNode<Integer> result = getMinimum().minimum(root);
+		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt1BinaryTree();
+		GciBinaryTreeNode<Integer> result = getMinimum().minimum(root);
 		assertMinimumSample1BinaryTree(result);
 	}
 
 	private void test6() {
-		GciGraphNode<Integer> root = GciGraphSample.createSampleInt16BinaryTree();
-		GciGraphNode<Integer> result = getMinimum().minimum(root);
+		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt16BinaryTree();
+		GciBinaryTreeNode<Integer> result = getMinimum().minimum(root);
 		assertMinimumSample6BinaryTree(result);
 	}
 
-	private void assertMinimumSample0BinaryTree(GciGraphNode<Integer> result) {
+	private void assertMinimumSample0BinaryTree(GciBinaryTreeNode<Integer> result) {
 		assert (result == null);
 	}
 
-	private void assertMinimumSample1BinaryTree(GciGraphNode<Integer> result) {
+	private void assertMinimumSample1BinaryTree(GciBinaryTreeNode<Integer> result) {
 		assert (result.getValue() == 3);
 	}
 
-	private void assertMinimumSample6BinaryTree(GciGraphNode<Integer> result) {
+	private void assertMinimumSample6BinaryTree(GciBinaryTreeNode<Integer> result) {
 		assert (result.getValue() == 3);
 	}
 }

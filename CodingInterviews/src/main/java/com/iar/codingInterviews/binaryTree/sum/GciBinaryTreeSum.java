@@ -1,8 +1,8 @@
 package com.iar.codingInterviews.binaryTree.sum;
 
-import com.iar.codingInterviews.graph.GciGraphNode;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
 
 public interface GciBinaryTreeSum {
 
-	int sum(GciGraphNode<Integer> root);
+	int sum(GciBinaryTreeNode<Integer> root);
 }

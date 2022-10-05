@@ -1,12 +1,13 @@
 package com.iar.codingInterviews.graph;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GciGraphNode<T> {
 
 	private T value;
 
-	GciGraphNode<T> left = null;
-
-	GciGraphNode<T> right = null;
+	private List<GciGraphNode<T>> neighbours = new ArrayList<>();
 
 	public T getValue() {
 		return value;
@@ -16,19 +17,13 @@ public class GciGraphNode<T> {
 		this.value = value;
 	}
 
-	public GciGraphNode<T> getLeft() {
-		return left;
+	public List<GciGraphNode<T>> getNeighbours() {
+		return neighbours;
 	}
 
-	public void setLeft(GciGraphNode<T> left) {
-		this.left = left;
+	public void setNeighbours(List<GciGraphNode<T>> neighbours) {
+		this.neighbours = neighbours;
 	}
 
-	public GciGraphNode<T> getRight() {
-		return right;
-	}
-
-	public void setRight(GciGraphNode<T> right) {
-		this.right = right;
-	}
+	
 }

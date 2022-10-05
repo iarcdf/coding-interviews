@@ -1,8 +1,8 @@
 package com.iar.codingInterviews.binaryTree.find;
 
-import com.iar.codingInterviews.graph.GciGraphNode;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
 
 public interface GciBinaryTreeFind<T> {
 
-	GciGraphNode<T> find(GciGraphNode<T> root, T target);
+	GciBinaryTreeNode<T> find(GciBinaryTreeNode<T> root, T target);
 }

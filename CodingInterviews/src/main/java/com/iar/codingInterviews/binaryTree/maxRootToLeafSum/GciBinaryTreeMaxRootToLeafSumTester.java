@@ -2,8 +2,8 @@ package com.iar.codingInterviews.binaryTree.maxRootToLeafSum;
 
 import org.junit.Test;
 
-import com.iar.codingInterviews.graph.GciGraphNode;
-import com.iar.codingInterviews.graph.GciGraphSample;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeSample;
 
 public class GciBinaryTreeMaxRootToLeafSumTester {
 
@@ -28,19 +28,19 @@ public class GciBinaryTreeMaxRootToLeafSumTester {
 	}
 
 	private void test0() {
-		GciGraphNode<Integer> root = GciGraphSample.createSampleInt0BinaryTree();
+		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt0BinaryTree();
 		int sum = getMaxRootToLeafSum().maxRootToLeafSum(root);
 		assertMaxRootToLeafSumSample0BinaryTree(sum);
 	}
 
 	private void test1() {
-		GciGraphNode<Integer> root = GciGraphSample.createSampleInt1BinaryTree();
+		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt1BinaryTree();
 		int sum = getMaxRootToLeafSum().maxRootToLeafSum(root);
 		assertMaxRootToLeafSumSample1BinaryTree(sum);
 	}
 
 	private void test6() {
-		GciGraphNode<Integer> root = GciGraphSample.createSampleInt26BinaryTree();
+		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt26BinaryTree();
 		int sum = getMaxRootToLeafSum().maxRootToLeafSum(root);
 		assertMaxRootToLeafSumSample6BinaryTree(sum);
 	}

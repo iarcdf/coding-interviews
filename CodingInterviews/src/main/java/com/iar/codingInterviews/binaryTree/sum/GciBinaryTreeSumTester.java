@@ -2,8 +2,8 @@ package com.iar.codingInterviews.binaryTree.sum;
 
 import org.junit.Test;
 
-import com.iar.codingInterviews.graph.GciGraphNode;
-import com.iar.codingInterviews.graph.GciGraphSample;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeSample;
 
 public class GciBinaryTreeSumTester {
 
@@ -28,19 +28,19 @@ public class GciBinaryTreeSumTester {
 	}
 
 	private void test0() {
-		GciGraphNode<Integer> root = GciGraphSample.createSampleInt0BinaryTree();
+		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt0BinaryTree();
 		int sum = getSum().sum(root);
 		assertSumSample0BinaryTree(sum);
 	}
 
 	private void test1() {
-		GciGraphNode<Integer> root = GciGraphSample.createSampleInt1BinaryTree();
+		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt1BinaryTree();
 		int sum = getSum().sum(root);
 		assertSumSample1BinaryTree(sum);
 	}
 
 	private void test6() {
-		GciGraphNode<Integer> root = GciGraphSample.createSampleInt06BinaryTree();
+		GciBinaryTreeNode<Integer> root = GciBinaryTreeSample.createSampleInt06BinaryTree();
 		int sum = getSum().sum(root);
 		assertSumSample6BinaryTree(sum);
 	}

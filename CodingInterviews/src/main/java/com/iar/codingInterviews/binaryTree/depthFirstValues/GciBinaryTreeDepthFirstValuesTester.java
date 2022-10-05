@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.iar.codingInterviews.graph.GciGraphNode;
-import com.iar.codingInterviews.graph.GciGraphSample;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeSample;
 
 public class GciBinaryTreeDepthFirstValuesTester {
 
@@ -30,19 +30,19 @@ public class GciBinaryTreeDepthFirstValuesTester {
 	}
 
 	private void test0() {
-		GciGraphNode<String> root = GciGraphSample.createSample0BinaryTree();
+		GciBinaryTreeNode<String> root = GciBinaryTreeSample.createSample0BinaryTree();
 		List<String> values = getDepthFirstValues().depthFirstValues(root);
 		assertDepthFirstValuesSample0BinaryTree(values);
 	}
 
 	private void test1() {
-		GciGraphNode<String> root = GciGraphSample.createSample1BinaryTree();
+		GciBinaryTreeNode<String> root = GciBinaryTreeSample.createSample1BinaryTree();
 		List<String> values = getDepthFirstValues().depthFirstValues(root);
 		assertDepthFirstValuesSample1BinaryTree(values);
 	}
 
 	private void test6() {
-		GciGraphNode<String> root = GciGraphSample.createSample6BinaryTree();
+		GciBinaryTreeNode<String> root = GciBinaryTreeSample.createSample6BinaryTree();
 		List<String> values = getDepthFirstValues().depthFirstValues(root);
 		assertDepthFirstValuesSample6BinaryTree(values);
 	}

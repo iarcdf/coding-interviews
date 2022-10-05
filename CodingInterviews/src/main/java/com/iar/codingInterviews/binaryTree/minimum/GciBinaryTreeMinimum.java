@@ -1,8 +1,8 @@
 package com.iar.codingInterviews.binaryTree.minimum;
 
-import com.iar.codingInterviews.graph.GciGraphNode;
+import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
 
 public interface GciBinaryTreeMinimum {
 
-	GciGraphNode<Integer> minimum(GciGraphNode<Integer> root);
+	GciBinaryTreeNode<Integer> minimum(GciBinaryTreeNode<Integer> root);
 }
