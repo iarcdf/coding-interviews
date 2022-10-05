@@ -9,6 +9,13 @@ public class GciGraphNode<T> {
 
 	private List<GciGraphNode<T>> neighbours = new ArrayList<>();
 
+	public GciGraphNode() {
+	}
+
+	public GciGraphNode(T value) {
+		this.value = value;
+	}
+
 	public T getValue() {
 		return value;
 	}
@@ -25,5 +32,4 @@ public class GciGraphNode<T> {
 		this.neighbours = neighbours;
 	}
 
-	
 }
