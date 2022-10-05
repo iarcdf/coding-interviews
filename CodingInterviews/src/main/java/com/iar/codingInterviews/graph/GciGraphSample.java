@@ -74,4 +74,56 @@ public class GciGraphSample {
 
 		return new GciGraphNode[] { j, f };
 	}
+	
+	public static GciGraphNode<String>[] createSampleForUndirectedHasPathA() {
+
+		GciGraphNode<String> i = new GciGraphNode<>("i");
+		GciGraphNode<String> j = new GciGraphNode<>("j");
+		GciGraphNode<String> k = new GciGraphNode<>("k");
+		GciGraphNode<String> l = new GciGraphNode<>("l");
+		GciGraphNode<String> m = new GciGraphNode<>("m");
+		GciGraphNode<String> n = new GciGraphNode<>("n");
+		GciGraphNode<String> o = new GciGraphNode<>("o");
+
+		i.getNeighbours().add(j);
+		i.getNeighbours().add(k);
+		j.getNeighbours().add(i);
+		j.getNeighbours().add(k);
+		k.getNeighbours().add(i);
+		k.getNeighbours().add(j);
+		k.getNeighbours().add(l);
+		k.getNeighbours().add(m);
+		l.getNeighbours().add(k);
+		m.getNeighbours().add(k);
+		o.getNeighbours().add(n);
+		n.getNeighbours().add(o);
+
+		return new GciGraphNode[] { i, l };
+	}
+	
+	public static GciGraphNode<String>[] createSampleForUndirectedHasPathB() {
+
+		GciGraphNode<String> i = new GciGraphNode<>("i");
+		GciGraphNode<String> j = new GciGraphNode<>("j");
+		GciGraphNode<String> k = new GciGraphNode<>("k");
+		GciGraphNode<String> l = new GciGraphNode<>("l");
+		GciGraphNode<String> m = new GciGraphNode<>("m");
+		GciGraphNode<String> n = new GciGraphNode<>("n");
+		GciGraphNode<String> o = new GciGraphNode<>("o");
+
+		i.getNeighbours().add(j);
+		i.getNeighbours().add(k);
+		j.getNeighbours().add(i);
+		j.getNeighbours().add(k);
+		k.getNeighbours().add(i);
+		k.getNeighbours().add(j);
+		k.getNeighbours().add(l);
+		k.getNeighbours().add(m);
+		l.getNeighbours().add(k);
+		m.getNeighbours().add(k);
+		o.getNeighbours().add(n);
+		n.getNeighbours().add(o);
+
+		return new GciGraphNode[] { k, o };
+	}
 }
