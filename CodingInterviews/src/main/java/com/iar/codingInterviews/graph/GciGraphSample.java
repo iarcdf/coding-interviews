@@ -197,4 +197,27 @@ public class GciGraphSample {
 
 		return nodes;
 	}
+
+	public static GciGraphNode<String>[] createSample1ForUndirectedShortestPath() {
+
+		GciGraphNode<String> v = new GciGraphNode<>("v");
+		GciGraphNode<String> w = new GciGraphNode<>("w");
+		GciGraphNode<String> x = new GciGraphNode<>("x");
+		GciGraphNode<String> y = new GciGraphNode<>("y");
+		GciGraphNode<String> z = new GciGraphNode<>("z");
+
+		v.getNeighbours().add(w);
+		v.getNeighbours().add(z);
+		w.getNeighbours().add(v);
+		w.getNeighbours().add(x);
+		x.getNeighbours().add(w);
+		x.getNeighbours().add(y);
+		y.getNeighbours().add(x);
+		y.getNeighbours().add(z);
+		z.getNeighbours().add(v);
+		z.getNeighbours().add(y);
+
+		return new GciGraphNode[] { w, z };
+	}
+
 }
