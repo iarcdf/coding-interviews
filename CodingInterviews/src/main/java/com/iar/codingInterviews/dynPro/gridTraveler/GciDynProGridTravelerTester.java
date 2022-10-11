@@ -14,10 +14,13 @@ public class GciDynProGridTravelerTester {
 	public void test() {
 		impl = new GciDynProGridTravelerImpl();
 		repeatTests();
+		impl = new GciDynProGridTravelerMemoizedImpl();
+		repeatTests();
+		impl = new GciDynProGridTravelerTabulationImpl();
+		repeatTests();
 	}
 
 	private void repeatTests() {
-		assert (getImpl().gridTraveler(1,1) == 1);
 		assert (getImpl().gridTraveler(2,2) == 2);
 		assert (getImpl().gridTraveler(2,3) == 3);
 		assert (getImpl().gridTraveler(3,2) == 3);

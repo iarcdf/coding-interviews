@@ -13,6 +13,7 @@ public class GciDynProGridTravelerMemoizedImpl implements GciDynProGridTraveler 
 	}
 
 	private int gridTraveler(int m, int n, Map<String, Integer> memo) {
+		
 		String memoKey = memoKey(m, n);
 		if (memo.containsKey(memoKey)) {
 			return memo.get(memoKey);
