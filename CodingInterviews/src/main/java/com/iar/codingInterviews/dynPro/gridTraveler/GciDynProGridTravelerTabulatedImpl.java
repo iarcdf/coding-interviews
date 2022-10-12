@@ -1,6 +1,6 @@
 package com.iar.codingInterviews.dynPro.gridTraveler;
 
-public class GciDynProGridTravelerTabulationImpl implements GciDynProGridTraveler {
+public class GciDynProGridTravelerTabulatedImpl implements GciDynProGridTraveler {
 
 	public int gridTraveler(int m, int n) {
 

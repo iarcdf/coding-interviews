@@ -16,7 +16,7 @@ public class GciDynProGridTravelerTester {
 		repeatTests();
 		impl = new GciDynProGridTravelerMemoizedImpl();
 		repeatTests();
-		impl = new GciDynProGridTravelerTabulationImpl();
+		impl = new GciDynProGridTravelerTabulatedImpl();
 		repeatTests();
 	}
 
