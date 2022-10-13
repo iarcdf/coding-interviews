@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GciDynProCanConstructImpl implements GciDynProCanConstruct {
+public class GciDynProCanConstructMemoized implements GciDynProCanConstruct {
 
 	// n = # nodes
 	// Time: O(n^m)
