@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GciDynProBestSumDepthFirstSearch implements GciDynProBestSum {
+public class GciDynProBestSumDepthFirstSearchMemoized implements GciDynProBestSum {
 
 	// n = # nodes
 	// Time: O(n^m)

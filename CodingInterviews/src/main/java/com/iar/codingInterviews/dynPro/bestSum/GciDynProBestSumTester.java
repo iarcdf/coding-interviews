@@ -18,7 +18,9 @@ public class GciDynProBestSumTester {
 	public void test() {
 		//bestSum = new GciDynProBestSumBreadthFirstSearch();
 		//repeatTests();
-		bestSum = new GciDynProBestSumDepthFirstSearch();
+		bestSum = new GciDynProBestSumDepthFirstSearchMemoized();
+		repeatTests();
+		bestSum = new GciDynProBestSumDepthFirstSearchTabulated();
 		repeatTests();
 	}
 
