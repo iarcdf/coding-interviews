@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GciDynProAllConstructImpl implements GciDynProAllConstruct {
+public class GciDynProAllConstructMemoized implements GciDynProAllConstruct {
 
 	public List<List<String>> allConstruct(String target, List<String> wordBank) {
 

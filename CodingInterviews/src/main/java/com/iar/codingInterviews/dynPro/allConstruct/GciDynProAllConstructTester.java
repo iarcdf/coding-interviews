@@ -15,7 +15,7 @@ public class GciDynProAllConstructTester {
 
 	@Test
 	public void test() {
-		impl = new GciDynProAllConstructImpl();
+		impl = new GciDynProAllConstructMemoized();
 		repeatTests();
 	}
 
