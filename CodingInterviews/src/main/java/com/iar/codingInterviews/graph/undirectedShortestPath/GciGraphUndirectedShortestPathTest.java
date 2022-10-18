@@ -1,6 +1,6 @@
 package com.iar.codingInterviews.graph.undirectedShortestPath;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.iar.codingInterviews.graph.GciGraphNode;
 import com.iar.codingInterviews.graph.GciGraphSample;

@@ -1,6 +1,6 @@
 package com.iar.codingInterviews.graph.gridIslandCount;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class GciGraphGridIslandCountTest {
 

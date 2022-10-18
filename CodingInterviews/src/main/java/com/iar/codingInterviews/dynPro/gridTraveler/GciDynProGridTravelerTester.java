@@ -1,6 +1,6 @@
 package com.iar.codingInterviews.dynPro.gridTraveler;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class GciDynProGridTravelerTester {
 

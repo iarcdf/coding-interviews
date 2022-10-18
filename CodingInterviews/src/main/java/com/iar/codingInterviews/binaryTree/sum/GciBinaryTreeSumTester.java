@@ -1,6 +1,6 @@
 package com.iar.codingInterviews.binaryTree.sum;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.iar.codingInterviews.binaryTree.GciBinaryTreeNode;
 import com.iar.codingInterviews.binaryTree.GciBinaryTreeSample;

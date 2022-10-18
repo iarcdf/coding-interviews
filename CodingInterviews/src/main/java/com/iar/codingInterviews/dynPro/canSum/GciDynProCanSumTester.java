@@ -2,7 +2,7 @@ package com.iar.codingInterviews.dynPro.canSum;
 
 import java.util.Arrays;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class GciDynProCanSumTester {
 

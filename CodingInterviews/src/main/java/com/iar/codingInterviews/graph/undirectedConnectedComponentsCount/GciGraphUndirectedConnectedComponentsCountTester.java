@@ -2,7 +2,7 @@ package com.iar.codingInterviews.graph.undirectedConnectedComponentsCount;
 
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.iar.codingInterviews.graph.GciGraphNode;
 import com.iar.codingInterviews.graph.GciGraphSample;

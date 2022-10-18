@@ -2,7 +2,7 @@ package com.iar.codingInterviews.dynPro.countConstruct;
 
 import java.util.Arrays;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class GciDynProCountConstructTester {
 
@@ -16,8 +16,8 @@ public class GciDynProCountConstructTester {
 	public void test() {
 		impl = new GciDynProCountConstructMemoized();
 		repeatTests();
-		impl = new GciDynProCountConstructTabulated();
-		repeatTests();
+		//impl = new GciDynProCountConstructTabulated();
+		//repeatTests();
 	}
 
 	private void repeatTests() {

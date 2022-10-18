@@ -2,7 +2,7 @@ package com.iar.codingInterviews.linkedList.convertToArray;
 
 import java.util.ArrayList;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.iar.codingInterviews.linkedList.GciLinkedListNode;
 
