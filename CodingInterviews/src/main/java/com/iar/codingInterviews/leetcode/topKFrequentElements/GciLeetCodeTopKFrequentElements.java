@@ -50,11 +50,8 @@ public class GciLeetCodeTopKFrequentElements {
 			}
 		}
 		int[] result = new int[k];
-		Object[] sortedFreqs = numToFreq.keySet().toArray();
+		Object[] sortedFreqs = freqToNum.keySet().toArray();
 		Arrays.sort(sortedFreqs);
-		for (int i = 0; i < sortedFreqs.length; i++) {
-			System.out.println(sortedFreqs[i] + ":" + freqToNum.get(sortedFreqs[i]));
-		}
 		int i = sortedFreqs.length - 1;
 		int j = 0;
 		while (i >= 0 && j < k) {
