@@ -85,6 +85,7 @@ public class GciLeetCodeSlidingWindowMaximum {
 		while (i < nums.length) {
 			if (max <= i - k) {
 				max = maxS;
+				maxS++;
 			}
 			if (nums[max] < nums[i]) {
 				max = i;
